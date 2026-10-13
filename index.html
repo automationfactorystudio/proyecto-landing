@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Propuesta de landing pages en formato plantilla con dos paquetes: Esencial y Captación.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="canonical" href="https://automationfactorystudio.github.io/proyecto-landing/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tu landing profesional | Tina Factory">
+  <meta property="og:description" content="Plantillas profesionales adaptadas a tu proyecto para presentar tu actividad o captar nuevos contactos.">
+  <meta property="og:url" content="https://automationfactorystudio.github.io/proyecto-landing/">
+  <meta property="og:image" content="https://automationfactorystudio.github.io/proyecto-landing/vista-previa.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tu landing profesional — Plantillas adaptadas a tu proyecto, Tina Factory">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tu landing profesional | Tina Factory">
+  <meta name="twitter:description" content="Plantillas profesionales adaptadas a tu proyecto para presentar tu actividad o captar nuevos contactos.">
+  <meta name="twitter:image" content="https://automationfactorystudio.github.io/proyecto-landing/vista-previa.png">
+  <title>Propuesta de Landing Pages | Tarifas especiales</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #173f32;
+      --forest-2: #275947;
+      --sage: #6e8c7c;
+      --sage-light: #dfe9e2;
+      --terracotta: #bd6b4f;
+      --terracotta-dark: #9e543c;
+      --terracotta-light: #f3dfd7;
+      --cream: #f8f5ee;
+      --paper: #fffdf9;
+      --ink: #23332b;
+      --muted: #637168;
+      --line: #dce4de;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(23, 63, 50, 0.12);
+      --shadow-soft: 0 12px 34px rgba(23, 63, 50, 0.09);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 7% 8%, rgba(110, 140, 124, 0.19), transparent 25rem),
+        radial-gradient(circle at 94% 20%, rgba(189, 107, 79, 0.14), transparent 24rem),
+        var(--cream);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .page-shell {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .page-shell::before,
+    .page-shell::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 999px;
+      filter: blur(1px);
+      pointer-events: none;
+    }
+
+    .page-shell::before {
+      width: 230px;
+      height: 230px;
+      top: 620px;
+      left: -140px;
+      border: 42px solid rgba(189, 107, 79, 0.08);
+    }
+
+    .page-shell::after {
+      width: 280px;
+      height: 280px;
+      top: 1480px;
+      right: -170px;
+      border: 54px solid rgba(39, 89, 71, 0.07);
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--forest);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: linear-gradient(145deg, var(--forest-2), var(--forest));
+      box-shadow: 0 8px 20px rgba(23, 63, 50, 0.18);
+    }
+
+    .brand-mark svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .print-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border: 1px solid rgba(23, 63, 50, 0.16);
+      border-radius: 999px;
+      color: var(--forest);
+      background: rgba(255, 255, 255, 0.68);
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(9px);
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .print-button:hover {
+      transform: translateY(-2px);
+      background: var(--white);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+      gap: clamp(34px, 7vw, 92px);
+      align-items: center;
+      padding: 60px 0 84px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 20px;
+      padding: 8px 13px;
+      border: 1px solid rgba(189, 107, 79, 0.25);
+      border-radius: 999px;
+      color: var(--terracotta-dark);
+      background: rgba(243, 223, 215, 0.72);
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      box-shadow: 0 0 0 5px rgba(189, 107, 79, 0.12);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      line-height: 1.12;
+    }
+
+    h1 {
+      max-width: 780px;
+      color: var(--forest);
+      font-size: clamp(2.7rem, 6vw, 5.3rem);
+      letter-spacing: -0.045em;
+    }
+
+    .hero-highlight {
+      position: relative;
+      display: inline-block;
+      color: var(--terracotta);
+      white-space: nowrap;
+    }
+
+    .hero-highlight::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -2px;
+      bottom: 0.07em;
+      left: -2px;
+      height: 0.24em;
+      border-radius: 999px;
+      background: rgba(189, 107, 79, 0.16);
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.18rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--terracotta);
+      box-shadow: 0 12px 26px rgba(189, 107, 79, 0.27);
+    }
+
+    .button-primary:hover {
+      background: var(--terracotta-dark);
+      box-shadow: 0 16px 32px rgba(189, 107, 79, 0.31);
+    }
+
+    .button-secondary {
+      color: var(--forest);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(23, 63, 50, 0.16);
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .hero-note svg {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      color: var(--sage);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 440px;
+    }
+
+    .hero-card {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(23, 63, 50, 0.1);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card-main {
+      inset: 30px 12px 34px 56px;
+      padding: 32px;
+      color: var(--white);
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.08), transparent 45%),
+        var(--forest);
+      transform: rotate(2.2deg);
+    }
+
+    .hero-card-small {
+      left: 0;
+      bottom: 0;
+      width: 205px;
+      min-height: 142px;
+      padding: 23px;
+      color: var(--forest);
+      background: rgba(255, 253, 249, 0.95);
+      transform: rotate(-4deg);
+    }
+
+    .hero-card-badge {
+      width: max-content;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.13);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .hero-card-main strong {
+      display: block;
+      max-width: 280px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .hero-card-lines {
+      display: grid;
+      gap: 11px;
+    }
+
+    .hero-card-lines span {
+      display: block;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-card-lines span:nth-child(2) {
+      width: 78%;
+    }
+
+    .hero-card-lines span:nth-child(3) {
+      width: 58%;
+    }
+
+    .small-label {
+      color: var(--terracotta-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .hero-card-small strong {
+      color: var(--forest);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.72rem;
+      white-space: nowrap;
+    }
+
+    .hero-card-small span:last-child {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      max-width: 770px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--terracotta-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      color: var(--forest);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: -0.025em;
+    }
+
+    .section-heading p {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    .price-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 30px;
+      border: 1px solid rgba(23, 63, 50, 0.11);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 253, 249, 0.9);
+      box-shadow: var(--shadow-soft);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .price-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--terracotta);
+      background:
+        linear-gradient(180deg, rgba(243, 223, 215, 0.48), transparent 38%),
+        var(--paper);
+    }
+
+    .featured-ribbon {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      padding: 7px 15px;
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--terracotta);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .pack-number {
+      color: var(--sage);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .price-card h3 {
+      margin-top: 8px;
+      color: var(--forest);
+      font-size: 2rem;
+    }
+
+    .pack-description {
+      min-height: 54px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: flex-end;
+      gap: 7px;
+      margin: 24px 0 22px;
+      color: var(--forest);
+    }
+
+    .price strong {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 3.5rem;
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 13px;
+      margin-bottom: 28px;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: #3e4e45;
+      font-size: 0.91rem;
+    }
+
+    .check {
+      display: grid;
+      width: 21px;
+      height: 21px;
+      place-items: center;
+      margin-top: 1px;
+      border-radius: 50%;
+      color: var(--forest);
+      background: var(--sage-light);
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .price-card .button {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .special-rate {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-top: 34px;
+      padding: 24px 27px;
+      border: 1px solid rgba(189, 107, 79, 0.24);
+      border-radius: var(--radius-md);
+      background: rgba(243, 223, 215, 0.56);
+    }
+
+    .special-rate-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--terracotta-dark);
+      background: var(--white);
+      box-shadow: 0 8px 20px rgba(189, 107, 79, 0.13);
+      font-weight: 900;
+    }
+
+    .special-rate strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--forest);
+    }
+
+    .special-rate p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .soft-section {
+      position: relative;
+      background: rgba(223, 233, 226, 0.47);
+      border-block: 1px solid rgba(23, 63, 50, 0.08);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(34px, 7vw, 86px);
+      align-items: start;
+    }
+
+    .content-heading h2 {
+      margin-top: 8px;
+      color: var(--forest);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.025em;
+    }
+
+    .content-heading > p {
+      margin-top: 17px;
+      color: var(--muted);
+    }
+
+    .mini-note {
+      margin-top: 26px;
+      padding: 20px;
+      border-left: 4px solid var(--terracotta);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    .requirements {
+      display: grid;
+      gap: 14px;
+    }
+
+    .requirement {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      border: 1px solid rgba(23, 63, 50, 0.09);
+      border-radius: var(--radius-md);
+      background: rgba(255, 253, 249, 0.82);
+    }
+
+    .requirement-icon {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      place-items: center;
+      border-radius: 14px;
+      color: var(--forest);
+      background: var(--sage-light);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .requirement h3 {
+      margin-bottom: 5px;
+      color: var(--forest);
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 1rem;
+    }
+
+    .requirement p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .scope-card {
+      padding: 30px;
+      border: 1px solid rgba(23, 63, 50, 0.1);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 253, 249, 0.87);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .scope-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--forest);
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 1.2rem;
+    }
+
+    .scope-symbol {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--sage-light);
+      font-weight: 900;
+    }
+
+    .scope-card.not-included .scope-symbol {
+      color: var(--terracotta-dark);
+      background: var(--terracotta-light);
+    }
+
+    .simple-list {
+      display: grid;
+      gap: 11px;
+      list-style: none;
+    }
+
+    .simple-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .simple-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.68em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .not-included .simple-list li::before {
+      background: var(--terracotta);
+    }
+
+    .legal-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-top: 28px;
+      padding: 25px 27px;
+      border: 1px solid rgba(189, 107, 79, 0.22);
+      border-radius: var(--radius-md);
+      background: var(--terracotta-light);
+    }
+
+    .legal-card svg {
+      width: 28px;
+      height: 28px;
+      color: var(--terracotta-dark);
+    }
+
+    .legal-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--forest);
+    }
+
+    .legal-card p {
+      color: #6a594f;
+      font-size: 0.91rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .process-step {
+      padding: 25px 22px;
+      border: 1px solid rgba(23, 63, 50, 0.09);
+      border-radius: var(--radius-md);
+      background: rgba(255, 253, 249, 0.76);
+    }
+
+    .process-number {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 17px;
+      place-items: center;
+      border-radius: 13px;
+      color: var(--white);
+      background: var(--terracotta);
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(189, 107, 79, 0.2);
+    }
+
+    .process-step h3 {
+      margin-bottom: 8px;
+      color: var(--forest);
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 1rem;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .faq {
+      display: grid;
+      max-width: 870px;
+      margin-inline: auto;
+      border-top: 1px solid var(--line);
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 22px 4px;
+      color: var(--forest);
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      display: grid;
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--forest);
+      background: var(--sage-light);
+      font-size: 1.15rem;
+      transition: transform 180ms ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .answer {
+      max-width: 760px;
+      padding: 0 4px 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .cta-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(36px, 7vw, 70px);
+      border-radius: var(--radius-xl);
+      color: var(--white);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(255, 255, 255, 0.13), transparent 25rem),
+        linear-gradient(145deg, var(--forest-2), var(--forest));
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -80px;
+      bottom: -110px;
+      border: 34px solid rgba(189, 107, 79, 0.26);
+      border-radius: 50%;
+    }
+
+    .cta-card h2 {
+      position: relative;
+      max-width: 720px;
+      margin-inline: auto;
+      font-size: clamp(2rem, 4.6vw, 3.7rem);
+      letter-spacing: -0.03em;
+    }
+
+    .cta-card p {
+      position: relative;
+      max-width: 660px;
+      margin: 17px auto 28px;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .cta-card .button {
+      position: relative;
+      color: var(--forest);
+      background: var(--white);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.17);
+    }
+
+    .cta-actions {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .cta-card .button-outline-light {
+      color: var(--white);
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.44);
+      box-shadow: none;
+    }
+
+    .cta-card .button-outline-light:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-mail {
+      position: relative;
+      display: block;
+      margin-top: 17px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.86rem;
+    }
+
+    footer {
+      padding: 34px 0 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(23, 63, 50, 0.1);
+    }
+
+    .footer-note {
+      max-width: 650px;
+    }
+
+    .footer-email {
+      color: var(--forest);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      z-index: 20;
+      right: clamp(18px, 3vw, 34px);
+      bottom: clamp(18px, 3vw, 34px);
+      display: grid;
+      width: 62px;
+      height: 62px;
+      place-items: center;
+      border: 3px solid rgba(255, 255, 255, 0.92);
+      border-radius: 50%;
+      color: var(--white);
+      background: #25d366;
+      box-shadow: 0 14px 34px rgba(23, 63, 50, 0.28);
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 18px 40px rgba(23, 63, 50, 0.34);
+    }
+
+    .whatsapp-float svg {
+      width: 31px;
+      height: 31px;
+    }
+
+    .whatsapp-float::before {
+      content: "¿Hablamos?";
+      position: absolute;
+      right: calc(100% + 11px);
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: var(--forest);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(189, 107, 79, 0.45);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 38px;
+      }
+
+      .hero-copy-wrap {
+        text-align: center;
+      }
+
+      .hero-copy,
+      .hero-actions,
+      .hero-note {
+        margin-inline: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-note {
+        max-width: 650px;
+        text-align: left;
+      }
+
+      .hero-visual {
+        width: min(100%, 540px);
+        margin-inline: auto;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 690px;
+        margin-inline: auto;
+      }
+
+      .pack-description {
+        min-height: auto;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 26px, 1160px);
+      }
+
+      .topbar {
+        padding-block: 17px;
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .print-button {
+        padding-inline: 14px;
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        padding: 34px 0 62px;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 13vw, 3.7rem);
+      }
+
+      .hero-highlight {
+        white-space: normal;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .cta-actions .button {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 370px;
+      }
+
+      .hero-card-main {
+        inset: 20px 2px 48px 36px;
+        padding: 25px;
+      }
+
+      .hero-card-small {
+        width: 175px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .price-card,
+      .scope-card {
+        padding: 25px 21px;
+      }
+
+      .scope-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .special-rate,
+      .legal-card {
+        grid-template-columns: 1fr;
+      }
+
+      .requirement {
+        grid-template-columns: 44px 1fr;
+        padding: 17px;
+      }
+
+      .requirement-icon {
+        width: 42px;
+        height: 42px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+      }
+
+      .whatsapp-float::before {
+        display: none;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 12mm;
+      }
+
+      body {
+        background: #ffffff;
+        color: #1e2d25;
+      }
+
+      .page-shell::before,
+      .page-shell::after,
+      .print-button,
+      .hero-visual,
+      .hero-actions,
+      .cta-card,
+      .whatsapp-float,
+      footer {
+        display: none !important;
+      }
+
+      .topbar {
+        padding-block: 8px 18px;
+      }
+
+      .hero {
+        display: block;
+        padding: 20px 0 34px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .section {
+        padding: 32px 0;
+      }
+
+      .price-card,
+      .scope-card,
+      .requirement,
+      .process-step {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .price-card:hover {
+        transform: none;
+      }
+
+      details {
+        break-inside: avoid;
+      }
+
+      details > * {
+        display: block !important;
+      }
+
+      summary::after {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="container topbar">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21V10"></path>
+            <path d="M12 14C7 14 4 11 4 6c5 0 8 3 8 8Z"></path>
+            <path d="M12 11c4 0 7-2.4 7-7-4.5 0-7 2.5-7 7Z"></path>
+          </svg>
+        </span>
+        <span>Tina Factory</span>
+      </a>
+
+      <button class="print-button" type="button" onclick="window.print()" aria-label="Imprimir o guardar la propuesta como PDF">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9V2h12v7"></path>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect width="12" height="8" x="6" y="14"></rect>
+        </svg>
+        Imprimir propuesta
+      </button>
+    </header>
+
+    <main id="inicio">
+      <section class="container hero">
+        <div class="hero-copy-wrap">
+          <span class="eyebrow"><span class="eyebrow-dot"></span>Tarifas especiales de apoyo</span>
+          <h1>Tu landing, clara, bonita y <span class="hero-highlight">lista para compartir</span></h1>
+          <p class="hero-copy">
+            Dos plantillas profesionales para presentar tu proyecto: una opción visual y directa, y otra preparada para captar solicitudes.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#paquetes">Ver los paquetes</a>
+            <a class="button button-secondary" href="https://graziana-fuiano.netlify.app" target="_blank" rel="noopener noreferrer">Ver plantilla de ejemplo ↗</a>
+          </div>
+
+          <p class="hero-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 16v-4"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+            Estos precios son una tarifa especial para personas del grupo. No representan el precio profesional habitual de una landing page.
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card hero-card-main">
+            <span class="hero-card-badge">Diseño responsive</span>
+            <strong>Una página que habla de ti y guía a la acción.</strong>
+            <div class="hero-card-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="hero-card hero-card-small">
+            <span class="small-label">Dos opciones</span>
+            <strong>150 € · 250 €</strong>
+            <span>Plantillas adaptadas a tu proyecto</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="paquetes">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Elige tu opción</span>
+            <h2>Dos paquetes, un alcance muy claro</h2>
+            <p>Elige una landing para presentar tu proyecto o una versión completa para captar solicitudes. Desde el principio sabrás qué incluye el trabajo y cuál es la inversión final.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <span class="pack-number">Pack 01</span>
+              <h3>Esencial</h3>
+              <p class="pack-description">Para presentar tu actividad con una página visual, cuidada y directa.</p>
+              <div class="price"><strong>150 €</strong><span>precio cerrado</span></div>
+
+              <ul class="feature-list">
+                <li><span class="check">✓</span><span>Landing de una sola página</span></li>
+                <li><span class="check">✓</span><span>Diseño adaptable a móvil, tableta y ordenador</span></li>
+                <li><span class="check">✓</span><span>Integración de hasta dos vídeos proporcionados por la clienta</span></li>
+                <li><span class="check">✓</span><span>Carrusel de hasta siete imágenes, con controles y deslizamiento</span></li>
+                <li><span class="check">✓</span><span>Organización visual de secciones y llamadas a la acción</span></li>
+                <li><span class="check">✓</span><span>Botones de contacto, WhatsApp y redes sociales</span></li>
+                <li><span class="check">✓</span><span>Publicación inicial en Netlify</span></li>
+                <li><span class="check">✓</span><span>Una ronda de pequeños ajustes</span></li>
+              </ul>
+
+              <a class="button button-secondary" href="mailto:tinafactory.ia@gmail.com?subject=Me%20interesa%20el%20Pack%20Esencial%20de%20150%20euros">Elegir Esencial</a>
+            </article>
+
+            <article class="price-card featured">
+              <span class="featured-ribbon">Más completo</span>
+              <span class="pack-number">Pack 02</span>
+              <h3>Captación</h3>
+              <p class="pack-description">Para recibir solicitudes directamente y dejar la landing preparada para captar contactos.</p>
+              <div class="price"><strong>250 €</strong><span>precio cerrado</span></div>
+
+              <ul class="feature-list">
+                <li><span class="check">✓</span><span>Todo lo incluido en el Pack Esencial</span></li>
+                <li><span class="check">✓</span><span>Formulario personalizado de hasta nueve campos</span></li>
+                <li><span class="check">✓</span><span>Recepción de solicitudes mediante Netlify Forms</span></li>
+                <li><span class="check">✓</span><span>Notificación por correo y protección antispam</span></li>
+                <li><span class="check">✓</span><span>Página de agradecimiento personalizada</span></li>
+                <li><span class="check">✓</span><span>Política de privacidad y aviso legal en formato plantilla</span></li>
+                <li><span class="check">✓</span><span>Configuración, prueba completa y entrega</span></li>
+              </ul>
+
+              <a class="button button-primary" href="mailto:tinafactory.ia@gmail.com?subject=Me%20interesa%20el%20Pack%20Captaci%C3%B3n%20de%20250%20euros">Elegir Captación</a>
+            </article>
+          </div>
+
+          <div class="special-rate">
+            <div class="special-rate-icon" aria-hidden="true">♥</div>
+            <div>
+              <strong>Una tarifa pensada para ayudar</strong>
+              <p>Estos paquetes se realizan a partir de una plantilla profesional que se adapta a los colores, contenidos e imagen de cada proyecto. Los diseños completamente personalizados y las funciones adicionales se presupuestan aparte, con un precio acordado según el trabajo necesario.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft-section" id="materiales">
+        <div class="container two-column">
+          <div class="content-heading">
+            <span class="section-kicker">Antes de comenzar</span>
+            <h2>¿Qué debe proporcionar la clienta?</h2>
+            <p>Para respetar el precio y avanzar sin retrasos, necesito recibir el contenido organizado antes de empezar el montaje.</p>
+            <div class="mini-note">
+              Los materiales se utilizarán únicamente para construir la landing. La clienta debe confirmar que tiene permiso para usar las imágenes, vídeos, logotipos y textos entregados.
+            </div>
+          </div>
+
+          <div class="requirements">
+            <article class="requirement">
+              <div class="requirement-icon" aria-hidden="true">01</div>
+              <div>
+                <h3>Información del proyecto</h3>
+                <p>Nombre, descripción de la actividad, propuesta principal, público al que se dirige y objetivo de la landing.</p>
+              </div>
+            </article>
+
+            <article class="requirement">
+              <div class="requirement-icon" aria-hidden="true">02</div>
+              <div>
+                <h3>Textos y datos de contacto</h3>
+                <p>Textos finales o información suficiente para organizarlos, correo, WhatsApp, redes sociales y enlaces necesarios.</p>
+              </div>
+            </article>
+
+            <article class="requirement">
+              <div class="requirement-icon" aria-hidden="true">03</div>
+              <div>
+                <h3>Imágenes y vídeos</h3>
+                <p>Fotografías, vídeos ya editados, portadas y cualquier material visual que deba aparecer en la página.</p>
+              </div>
+            </article>
+
+            <article class="requirement">
+              <div class="requirement-icon" aria-hidden="true">04</div>
+              <div>
+                <h3>Datos legales y formulario</h3>
+                <p>Identidad de la responsable, datos de contacto, campos que desea solicitar y correo donde quiere recibir los avisos.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="condiciones">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Sin letra pequeña</span>
+            <h2>Qué está incluido y qué se presupuesta aparte</h2>
+            <p>Definir los límites protege a ambas partes y evita que un proyecto sencillo termine convirtiéndose en un trabajo completamente distinto.</p>
+          </div>
+
+          <div class="scope-grid">
+            <article class="scope-card">
+              <h3><span class="scope-symbol" aria-hidden="true">✓</span>Incluido en el servicio</h3>
+              <ul class="simple-list">
+                <li>Diseño y montaje según el paquete elegido.</li>
+                <li>Adaptación básica a móvil, tableta y ordenador.</li>
+                <li>Publicación inicial en una cuenta de Netlify.</li>
+                <li>Comprobación de enlaces y funcionamiento general.</li>
+                <li>Una ronda de pequeños cambios sobre el diseño entregado.</li>
+                <li>Copia final de los archivos de la landing.</li>
+              </ul>
+            </article>
+
+            <article class="scope-card not-included">
+              <h3><span class="scope-symbol" aria-hidden="true">+</span>Servicios adicionales</h3>
+              <ul class="simple-list">
+                <li>Diseño completamente personalizado fuera de las plantillas.</li>
+                <li>Compra o renovación de dominio y planes de pago.</li>
+                <li>Edición de vídeos, diseño de logotipo o identidad visual completa.</li>
+                <li>Redacción profesional de textos desde cero.</li>
+                <li>Mantenimiento, nuevas secciones o cambios posteriores.</li>
+                <li>Otros trabajos no incluidos, con presupuesto acordado previamente.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="legal-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <div>
+              <strong>Sobre los textos legales</strong>
+              <p>La política de privacidad y el aviso legal se entregan como plantillas adaptables. La clienta debe proporcionar y revisar sus datos reales. Este servicio no sustituye el asesoramiento de un profesional jurídico.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Así trabajaremos</span>
+            <h2>Un proceso sencillo de principio a fin</h2>
+          </div>
+
+          <div class="steps-grid">
+            <article class="process-step">
+              <div class="process-number">1</div>
+              <h3>Elegimos el paquete</h3>
+              <p>Confirmamos la opción, el objetivo de la página y todo lo que debe incluir.</p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-number">2</div>
+              <h3>Recibo los materiales</h3>
+              <p>La clienta entrega textos, imágenes, vídeos, enlaces y datos necesarios.</p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-number">3</div>
+              <h3>Diseño y revisión</h3>
+              <p>Preparo la landing y realizamos una ronda de pequeños ajustes.</p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-number">4</div>
+              <h3>Publicación y entrega</h3>
+              <p>La ponemos en funcionamiento, hacemos las pruebas y entrego los archivos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="preguntas">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Preguntas frecuentes</span>
+            <h2>Todo claro antes de empezar</h2>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>¿Necesito una base de datos para recibir formularios?</summary>
+              <p class="answer">No para este tipo de landing. En el Pack Captación, Netlify Forms recibe y almacena las solicitudes y envía una notificación al correo configurado.</p>
+            </details>
+
+            <details>
+              <summary>¿Puedo pedir cambios después de ver la landing?</summary>
+              <p class="answer">Sí. Cada paquete incluye una ronda de pequeños ajustes. Los cambios de estructura, nuevas secciones o ampliaciones importantes se presupuestan aparte.</p>
+            </details>
+
+            <details>
+              <summary>¿Los vídeos y las imágenes están incluidos?</summary>
+              <p class="answer">La integración sí está incluida según cada paquete. La clienta debe proporcionar los archivos finales y confirmar que tiene autorización para utilizarlos. La creación o edición de esos materiales es un servicio distinto.</p>
+            </details>
+
+            <details>
+              <summary>¿El dominio está incluido en el precio?</summary>
+              <p class="answer">No. La publicación inicial puede realizarse con la dirección gratuita proporcionada por Netlify. Si se desea un dominio propio, su compra, renovación y configuración se valorarán por separado.</p>
+            </details>
+
+            <details>
+              <summary>¿La política de privacidad ya queda validada legalmente?</summary>
+              <p class="answer">Se entrega una plantilla organizada para completar con los datos reales de la clienta. No es una revisión jurídica ni sustituye el asesoramiento legal profesional.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué ocurre si después necesito mantenimiento?</summary>
+              <p class="answer">Los cambios posteriores a la entrega pueden contratarse por horas o mediante un nuevo presupuesto, dependiendo del trabajo necesario.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-card">
+            <h2>Elige la plantilla que mejor encaja contigo</h2>
+            <p>Puedes ver una landing real antes de decidirte. Cuando tengas clara tu opción, escríbeme y prepararemos los contenidos necesarios para empezar.</p>
+            <div class="cta-actions">
+              <a class="button" href="https://graziana-fuiano.netlify.app" target="_blank" rel="noopener noreferrer">Ver plantilla de ejemplo ↗</a>
+              <a class="button button-outline-light" href="mailto:tinafactory.ia@gmail.com?subject=Quiero%20preparar%20mi%20landing%20page">Escribir a Tina Factory</a>
+            </div>
+            <span class="contact-mail">tinafactory.ia@gmail.com</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <p class="footer-note">Tarifas especiales sujetas al alcance descrito y a la entrega previa de todos los materiales necesarios.</p>
+        <a class="footer-email" href="mailto:tinafactory.ia@gmail.com">tinafactory.ia@gmail.com</a>
+        <span>© <span id="current-year"></span> Tina Factory</span>
+      </div>
+    </footer>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/34653503255?text=Hola%2C%20he%20visto%20tu%20propuesta%20de%20landing%20pages%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.1 9.1 0 0 1-3.7-.9L3 21l1.8-5.1a8.8 8.8 0 1 1 16.2-4.4Z"></path>
+      <path d="M8.2 8.1c.3 3.7 2.2 5.6 5.9 5.9"></path>
+      <path d="M13.7 12.2 15 13.5"></path>
+      <path d="m7.8 7.7 1.3 1.4"></path>
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
